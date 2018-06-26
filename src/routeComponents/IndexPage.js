@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import { Button } from 'antd';
 import styles from './IndexPage.scss';
 import {query} from '../services/nodes';
+import websocket from '../utils/websocket';
 
 class IndexPage extends Component {
   constructor(props){
@@ -25,6 +26,14 @@ class IndexPage extends Component {
         name:'jianglu'
       }
     });
+    //websocket请求
+    websocket('wss://iecho.websocket.org',{
+      body:'hello'
+    }).then(function(res){
+      console.log(res,'res')
+    }).catch(function(err){
+      console.log(err,'err')
+    })
   }
   render() {
       return (
