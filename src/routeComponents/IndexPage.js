@@ -27,7 +27,7 @@ class IndexPage extends Component {
       }
     });
     //websocket请求
-    websocket('wss://iecho.websocket.org',{
+    websocket('wss://echo.websocket.org',{
       body:'hello'
     }).then(function(res){
       console.log(res,'res')
