@@ -1,4 +1,4 @@
 ## react-dva基础项目模板
 ```
-都有实例
+React-Router + Redux + Redux-saga + fetch
 ```
